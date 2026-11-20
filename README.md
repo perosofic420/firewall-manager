@@ -23,3 +23,6 @@ To keep a port private, bind it to localhost (`-p 127.0.0.1:8080:80`) instead of
 - iptables
 - ipset
 - grep
+
+## Fallbacks
+If fetching IP lists from Bunny or Cloudflare fails, it falls back to JSONs hosted on [https://cdn.perosofic.dev](https://cdn.perosofic.dev) (backed by Cloudflare S3). Failures are rare, though the fallback data can be stale.
