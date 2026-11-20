@@ -13,9 +13,7 @@
 
 # Code coverage profiles and other test artifacts
 *.out
-coverage.html
-coverage.txt
-coverage.xml
+coverage.*
 *.coverprofile
 profile.cov
 
@@ -32,3 +30,10 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Config
+/config.json
+/cloudflare-v4.json
+/cloudflare-v6.json
+/bunny-v4.json
+/bunny-v6.json

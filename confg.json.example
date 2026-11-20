@@ -1,0 +1,29 @@
+{
+    "default_policy": "deny_all",
+
+    "ssh": {
+        "enabled": true,
+        "port": 22,
+        "policy": "allow_all",
+        "ipset_v4": [],
+        "ipset_v6": []
+    },
+
+    "http": {
+        "enabled": true,
+        "port": 80,
+        "policy": "cloudflare_only",
+        "ipset_v4": [],
+        "ipset_v6": []
+    },
+
+    "https": {
+        "enabled": true,
+        "port": 443,
+        "policy": "cloudflare_only",
+        "ipset_v4": [],
+        "ipset_v6": []
+    },
+
+    "extras": []
+}
