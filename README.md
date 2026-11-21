@@ -6,8 +6,10 @@ The `extras` array in the config holds custom rules beyond the built-in `ssh`, `
 
 ### Raw strings
 A string is treated as a ready-made command and appended to the command list as-is, unless an identical command is already in the list.
+Write the rule the way `iptables -S` prints it, otherwise the duplicate check won't recognise it. iptables normalises rules when saving them, so for example `--dport` always comes with an explicit `-m tcp` (or `-m udp`):
 ```json
 "extras": [
+    "iptables -A INPUT -p tcp -m tcp --dport 25565 -j ACCEPT",
     "iptables -A INPUT -p icmp -j ACCEPT"
 ]
 ```
